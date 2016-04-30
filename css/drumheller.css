@@ -1,0 +1,78 @@
+/*"I see a red door and I want to paint it black"*/
+
+html, head, body, a{   
+    width: 100%;    
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+a{
+  text-decoration: none;
+}
+
+table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td{
+    padding: 0.4em;
+}
+
+#buttons{
+    font-size: 400%;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.m-link:hover{
+   color: #ff4d4d;
+}
+
+#male{
+   font-size: 160%;
+   padding: 0.2em;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+    position: absolute;
+    z-index: 1;
+    font-size: 25%;
+}
+
+.tooltip:hover .tooltiptext{
+   visibility:visible; 
+}
+
+#male:hover{
+    color: #ffff4d; /* Meh it's okay for now */
+}
+
+.dark-bar{
+    height: 35%;
+    width: 100%;
+    min-width: 50px;
+    min-height: 50px;
+    background-color: #ff4d4d; /* Meh it's okay for now */
+}
+
+#heart:hover{
+    font-size: 130%;
+}
+
+#main-content{
+   height: 30%;
+   width: 100%;
+   min-height: 100px;
+   min-width: 100px;
+   background-color: #0d0d0d; /* Meh it's okay for now */
+}
