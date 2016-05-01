@@ -5,9 +5,29 @@
         <title>Brandon Drumheller</title>
         <link rel="stylesheet" type="text/css" href="css/drumheller.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+        <script> 
+            $(document).ready(function(){
+                $("#male, #resume").click(function(event){
+                    event.preventDefault();
+                    var height_pct = Math.round( 
+                        $('#bottom-bar').height() / 
+                        $('#bottom-bar').parent().height() * 100
+                        );  
+                    if (height_pct === 35){
+                        $('#bottom-bar').height("70%");
+                    }
+                    else{
+                        $('#bottom-bar').height("35%");
+                    }
+                    $("#rollup").toggle("slow");
+                 
+                });
+            });
+        </script>
     </head>
     <body>
-        <div class='dark-bar'></div>  
+        <div id="rollup" class='dark-bar'></div>  
         <div id="main-content">
             <table id="buttons">
                 <tr>
@@ -30,7 +50,7 @@
                     </td>
                     <td> 
                         <a href="" class="tooltip">
-                            <i class="m-link icon-file-text"></i>
+                            <i id="resume" class="m-link icon-file-text"></i>
                             <span class="tooltiptext">Coming soon.</span>
                         </a>
                     </td>
@@ -41,6 +61,6 @@
             </table>                
         </div>
         <!-- <embed width="100%" height="450" src="pdf/resume.pdf" type="application/pdf"></embed> -->
-        <div class='dark-bar'></div>    
+        <div id="bottom-bar" class='dark-bar'></div>    
     </body>
 </html>

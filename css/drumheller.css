@@ -6,11 +6,18 @@ html, head, body, a{
     margin: 0;
     padding: 0;
     color: white;
+    background-color: #ff4d4d;
 }
 
 a{
   text-decoration: none;
+  background-color: black;
 }
+
+i{
+    background-color: black;
+}
+
 
 table{
     margin-left: auto;
@@ -63,6 +70,12 @@ td{
     min-width: 50px;
     min-height: 50px;
     background-color: #ff4d4d; /* Meh it's okay for now */
+}
+
+#rollup{
+    height: 35%;
+    min-width: 0px !important;
+    min-height: 0px !important;
 }
 
 #heart:hover{
