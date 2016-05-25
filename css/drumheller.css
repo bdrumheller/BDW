@@ -28,10 +28,11 @@ td{
     padding: 0.4em;
 }
 
+
 #buttons{
     font-size: 400%;
     vertical-align: middle;
-    height: 100%;
+    height:100%;
 }
 
 .m-link:hover{
@@ -78,6 +79,7 @@ td{
     min-height: 0px !important;
 }
 
+/* Time can never mend, the careless whispers of a good friend." */
 #heart:hover{
     font-size: 130%;
 }

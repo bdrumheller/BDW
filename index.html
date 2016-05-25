@@ -1,37 +1,20 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <!-- You've made it to my site. Good job (^_^) -->
     <head>
+        <meta charset="utf-8" />
         <title>Brandon Drumheller</title>
         <link rel="stylesheet" type="text/css" href="css/drumheller.css">
         <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
-        <script> 
-            $(document).ready(function(){
-                $("#male, #resume").click(function(event){
-                    event.preventDefault();
-                    var height_pct = Math.round( 
-                        $('#bottom-bar').height() / 
-                        $('#bottom-bar').parent().height() * 100
-                        );  
-                    if (height_pct === 35){
-                        $('#bottom-bar').height("70%");
-                    }
-                    else{
-                        $('#bottom-bar').height("35%");
-                    }
-                    $("#rollup").toggle("slow");
-                 
-                });
-            });
-        </script>
+        <script src="js/jquery.min.js" type="text/javascript"></script>
+        <script src="js/drumheller.js" type="text/javascript"></script> 
     </head>
     <body>
         <div id="rollup" class='dark-bar'></div>  
         <div id="main-content">
             <table id="buttons">
                 <tr>
-                    <td> 
+                    <td>
                         <a href="https://www.linkedin.com/in/bdrumheller">
                             <i class="m-link icon-linkedin-sign"></i>
                         </a>
@@ -55,7 +38,7 @@
                         </a>
                     </td>
                     <td> 
-                        <i id="heart" class="m-link icon-heart"> </i>
+                        <i id="heart" class="m-link icon-heart"></i>
                     </td>
                 </tr>    
             </table>                
