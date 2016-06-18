@@ -62,7 +62,7 @@ td{
 }
 
 #male:hover{
-    color: #ffff4d; /* Meh it's okay for now */
+    -webkit-text-stroke: 2px #ff4d4d;
 }
 
 .dark-bar{
@@ -79,7 +79,7 @@ td{
     min-height: 0px !important;
 }
 
-/* Time can never mend, the careless whispers of a good friend." */
+/* "Time can never mend, the careless whispers of a good friend." */
 #heart:hover{
     font-size: 130%;
 }
@@ -87,7 +87,13 @@ td{
 #main-content{
    height: 30%;
    width: 100%;
-   min-height: 100px;
-   min-width: 100px;
+   min-height: 150px;
+   min-width: 550px;
    background-color: #0d0d0d; /* Meh it's okay for now */
+   overflow:hidden;
+}
+
+.stroke {
+  -webkit-text-stroke: 2px #ff4d4d;
+   /*font-size: %;*/
 }
