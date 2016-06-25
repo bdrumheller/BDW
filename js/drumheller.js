@@ -14,6 +14,7 @@ $(document).ready(function(){
             $('#bottom-bar').height("70%");
         } else{
             $('#bottom-bar').height("35%");
+            $('#rollup').height("35%");
         }
         $('html').css('overflow','hidden');
         $("#rollup").toggle("slow").promise().done(function(){
