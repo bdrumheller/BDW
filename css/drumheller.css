@@ -8,6 +8,11 @@ html, head, body, a{
   color: white;
   background-color: #ff4d4d;
   font-family: Consolas, Times, serif;
+  
+}
+
+html{
+  overflow:hidden;
 }
 
 a{

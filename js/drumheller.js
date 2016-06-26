@@ -27,7 +27,7 @@ function moveBars(event, reset){
 }
 
 function bioStuff(height_pct,reset){
-    if(reset) $('html').css('overflow','auto');
+    $('html').css('overflow','auto');
     if (height_pct === 35 || (!reset && height_pct === 135)){
         $('#bio').css('display','block');
     } else{
@@ -54,7 +54,7 @@ $(document).ready(function(){
 });
 
 function resumeStuff(height_pct,reset){
-    if(reset) $('html').css('overflow','auto');
+    $('html').css('overflow','auto');
     if (height_pct === 35 || (!reset && height_pct === 135)){
         $('#resume-pdf').css('display','block');
     } else{
