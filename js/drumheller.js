@@ -5,7 +5,6 @@ function getHeightPercent(id){
     );       
 }
 
-
 /* Should do this a better way, but it's 2:17 A.M and it works :P*/
 
 var last_clicked = '';
@@ -28,7 +27,7 @@ function moveBars(event, reset){
 }
 
 function bioStuff(height_pct,reset){
-    $('html').css('overflow','auto');
+    if(reset) $('html').css('overflow','auto');
     if (height_pct === 35 || (!reset && height_pct === 135)){
         $('#bio').css('display','block');
     } else{
@@ -55,7 +54,7 @@ $(document).ready(function(){
 });
 
 function resumeStuff(height_pct,reset){
-    $('html').css('overflow','auto');
+    if(reset) $('html').css('overflow','auto');
     if (height_pct === 35 || (!reset && height_pct === 135)){
         $('#resume-pdf').css('display','block');
     } else{

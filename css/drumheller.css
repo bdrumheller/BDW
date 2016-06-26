@@ -100,7 +100,7 @@ td{
   overflow:hidden;
 }
 
-.re{
+.info{
   text-align:center;
   height:85%;
   display:none;
@@ -140,4 +140,8 @@ ul{
   list-style: none;
   margin: 0; 
   padding: 0; 
+}
+
+h2{
+  border-bottom: 1px solid #orange;
 }
