@@ -147,6 +147,6 @@ ul{
   padding: 0; 
 }
 
-h2{
-  border-bottom: 1px solid #orange;
+li{
+  display:inline;
 }

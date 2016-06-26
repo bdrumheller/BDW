@@ -13,7 +13,7 @@ function moveBars(event, reset){
     event.preventDefault();
     var height_pct = getHeightPercent('#bottom-bar'); 
     if (height_pct === 35 || (!reset && height_pct === 135)){
-        $('#bottom-bar').height("135%");
+        $('#bottom-bar').height("135%"); /*Replace with a calculation based on page width */
         $('.red-bar-pad').css('display','block');
     } else if (reset){
         $('.red-bar-pad').css('display','none');
@@ -109,4 +109,6 @@ $(document).ready(
                 }, 700);
         });
     }
-)
+);
+
+
