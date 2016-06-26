@@ -7,6 +7,7 @@ html, head, body, a{
   padding: 0;
   color: white;
   background-color: #ff4d4d;
+  font-family: Consolas, Times, serif;
 }
 
 a{
@@ -14,10 +15,14 @@ a{
   background-color: #0d0d0d;
 }
 
-i{ 
-  background-color: #0d0d0d;
+a:hover{
+  color: #ff4d4d;
 }
 
+i{ 
+  background-color: #0d0d0d;
+  text-align: center;
+}
 
 table{
   margin-left: auto;
@@ -25,7 +30,17 @@ table{
 }
 
 td{
+  position: relative;
+}
+
+.outer{
   padding: 0.4em;
+}
+
+#center-icon{
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  bottom:0px;
 }
 
 #buttons{
@@ -41,12 +56,13 @@ td{
 
 #male{
   font-size: 160%;
-  padding: 0.2em;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  padding-bottom:0em;
 }
 
 #male:hover{
-  -webkit-text-stroke: 2px #ff4d4d;
-  text-align: center;
+  color:#ffffb3;
 }
 
 /* "Time can never mend, the careless whispers of a good friend." */
@@ -62,6 +78,13 @@ td{
   background-color: #ff4d4d;
 }
 
+.red-bar-pad{
+  min-width: 50px;
+  min-height: 90px;
+  background-color: #ff4d4d;
+  display:none;
+}
+
 #rollup{
   height: 35%;
   min-width: 0px !important;
@@ -71,10 +94,29 @@ td{
 #main-content{
   height: 30%;
   width: 100%;
-  min-height: 150px;
+  min-height: 220px;
   min-width: 550px;
   background-color: #0d0d0d; 
   overflow:hidden;
+}
+
+.re{
+  text-align:center;
+  height:85%;
+  display:none;
+  padding: 3em;
+  padding-top:5em;
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #0d0d0d;
+}
+
+.pdf{
+  overflow:hidden; 
+  max-height:100%;
+  height: 100%;
+  width:100%;
 }
 
 /*Different strokes for different folks */
@@ -85,7 +127,17 @@ td{
 .arrow-up {
   width: 0; 
   height: 0; 
-  border-left: 50px solid transparent;
-  border-right: 50px solid transparent;
-  border-bottom: 50px solid green;
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-bottom: 0.75em solid white;
+  position: absolute; 
+  bottom: -3px; 
+  right:0.2em;
+  visibility:hidden;
+}
+
+ul{
+  list-style: none;
+  margin: 0; 
+  padding: 0; 
 }

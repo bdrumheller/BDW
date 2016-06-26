@@ -5,26 +5,79 @@ function getHeightPercent(id){
     );       
 }
 
+
+/* Should do this a better way, but it's 2:17 A.M and it works :P*/
+
+var last_clicked = '';
+
+function moveBars(event, reset){
+    event.preventDefault();
+    var height_pct = getHeightPercent('#bottom-bar'); 
+    if (height_pct === 35 || (!reset && height_pct === 135)){
+        $('#bottom-bar').height("135%");
+        $('.red-bar-pad').css('display','block');
+    } else if (reset){
+        $('.red-bar-pad').css('display','none');
+        $('#bottom-bar').height("35%");
+        $('#rollup').height("35%");
+    }
+    $('html').css('overflow','hidden');
+    $('#resume-pdf').css('display','none');
+    $('#bio').css('display','none');
+    return height_pct;
+}
+
+function bioStuff(height_pct,reset){
+    $('html').css('overflow','auto');
+    if (height_pct === 35 || (!reset && height_pct === 135)){
+        $('#bio').css('display','block');
+    } else{
+        $('#bio').css('display','none');
+        $('#male').css('color','white');
+    } 
+}
+
 $(document).ready(function(){
-    $("#male, #resume").click(function(event){
-        console.log();
-        event.preventDefault();
-        var height_pct = getHeightPercent('#bottom-bar'); 
-        if (height_pct === 35){
-            $('#bottom-bar').height("70%");
-        } else{
-            $('#bottom-bar').height("35%");
-            $('#rollup').height("35%");
+     $("#male").click(function(event){
+        var reset = (last_clicked === 'male' || last_clicked === '');
+        var height_pct = moveBars(event, reset);
+        last_clicked = (last_clicked === 'male') ? '' : 'male';
+        $('#resume').css('color','white');
+        $('#male').css('color','#ffffb3');
+        if(reset){
+            $("#rollup").toggle("slow").promise().done(function(){
+                bioStuff(height_pct,reset);
+            });
+        }else{
+            bioStuff(height_pct,reset);
         }
-        $('html').css('overflow','hidden');
-        $("#rollup").toggle("slow").promise().done(function(){
-            $('html').css('overflow','auto');
-            if (height_pct === 35){
-                $('#'+event.toElement.id).css('-webkit-text-stroke', '2px #ff4d4d');
-            } else{
-                $('#'+event.toElement.id).css('-webkit-text-stroke', '0px #ffffff');
-            } 
-        });
+    });
+});
+
+function resumeStuff(height_pct,reset){
+    $('html').css('overflow','auto');
+    if (height_pct === 35 || (!reset && height_pct === 135)){
+        $('#resume-pdf').css('display','block');
+    } else{
+        $('#resume-pdf').css('display','none');
+        $('#resume').css('color','white');
+    } 
+}
+
+$(document).ready(function(){
+    $("#resume").click(function(event){
+        var reset = (last_clicked === 'resume' || last_clicked === '');
+        var height_pct = moveBars(event, reset);
+        last_clicked = (last_clicked === 'resume') ? '' : 'resume';;
+        $('#resume').css('color','#ff4d4d');
+        $('#male').css('color','white');
+        if(reset){
+            $("#rollup").toggle("slow").promise().done(function(){
+                resumeStuff(height_pct,reset);
+            });
+        } else{
+            resumeStuff(height_pct,reset);
+        }
     });
 });
 
