@@ -3,13 +3,14 @@
 <html lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Brandon Drumheller</title>
     <link rel="stylesheet" href="css/drumheller.css">
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
+    <script src="js/pdfjs/build/pdf.js"></script>
     <script src="js/jquery.min.js"></script>
-    <script src="js/drumheller.js"></script> 
+    <script src="js/drumheller.js"></script>
+    <script src="js/resume.js"></script>    
   </head>
   <body>
     <div id="rollup" class="red-bar"></div>  
@@ -48,40 +49,42 @@
       </tr>
       </table>                
     </div>
-    <div class='red-bar-pad'></div>
+    <div class="red-bar-pad"></div>
     <div id="bottom-bar" class="red-bar">
       <div id="resume-pdf" class="info">
-        <embed class="pdf" src="pdf/resume.pdf#scrollbar=0" type="application/pdf"></embed>
+        <canvas id="resume-canvas" class="pdf"></canvas>
       </div>
-      <div id="bio" class="info" >
-        <h1>Brandon Drumheller <br /> <h3>ブランドン　ドラムヘラ</h3> </h1>
-        <p>"Study hard what interests you the most in the most undisciplined, irreverent and original manner possible." - Richard Feynman</p>
-        
-        <h2><u>Bio</u></h2>
-        <p>I am a Computer Science and Mathematics dual major at Rensselaer Polytechnic Institute (RPI) graduating in December 2016. 
-        I am academically motivated with interests primarily in programming and maths. I am admittedly an overachiever.  
-        I was able to combine my skillsets together when I worked with <a href="https://triazo.net/" target="_blank">Adam Freeman</a> 
-        to write <a href="pdf/gaussian-curvature.pdf" target="_blank"> this paper on coloring Gaussian curvature</a> on arbitrary Blender meshes.
-        The source code is available <a href="https://github.com/triazo/meshblend" target="_blank">on Github</a>. I prefer to work with backend 
-        development, but I have experience with frontend development as well. When I am not working, I enjoy learning about other cultures. 
-        While at RPI, I have worked with the Japanese Cultural Association, the Hong Kong Students Association, and the Asian Cultural Union to promote
-        cultural awareness on our campus. I would also like to improve my Japanese to at least an N5 proficiency. Additionally, I like puzzles ಠ‿↼.
-        </p>
-        <h2><u>Recommended Channels</u></h2>
-        <ul>
-          <li><a href="https://www.youtube.com/channel/UCoxcjq-8xIDTYp3uz647V5A" target="_blank">Numberphile</a></li> &bull;
-          <li><a href="https://www.youtube.com/channel/UC6nSFpj9HTCZ5t-N3Rm3-HA" target="_blank">VSauce</a></li> &bull;
-          <li><a href="https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA" target="_blank">Computerphile</a></li> &bull;
-          <li><a href="https://www.youtube.com/channel/UCR9sFzaG9Ia_kXJhfxtFMBA" target="_blank">MelodySheep</a></li> &bull;
-          <li><a href="https://www.youtube.com/channel/UCSju5G2aFaWMqn-_0YBtq5A" target="_blank">StandUpMaths</a></li> &bull;
-          <li><a href="https://www.youtube.com/channel/UCuTNcnGVHRlEJ7uq-X8mfTQ" target="_blank">JPCMHD</a></li> &bull;
-          <li><a href="https://www.youtube.com/channel/UCMpizQXRt817D0qpBQZ2TlA" target="_blank">Singing Banana</a></li> &bull;
-          <li><a href="https://www.youtube.com/channel/UCZOnoLKzoBItcEk5OsES2TA" target="_blank">Don't Hug Me I'm Scared</a></li> &bull;
-          <li><a href="https://www.youtube.com/channel/UCsXVk37bltHxD1rDPwtNM8Q" target="_blank">Kurzgesagt</a></li> &bull;
-          <li><a href="https://www.youtube.com/channel/UCH6vXjt-BA7QHl0KnfL-7RQ" target="_blank">Simon's Cat</a></li> &bull;
-          <li><a href="https://www.youtube.com/channel/UCNYrK4tc5i1-eL8TXesH2pg" target="_blank">Schmoyoho</a></li>
-        </ul>
-        <iframe style="padding-top:40px;" width="60%" height="37.5%" src="https://www.youtube.com/embed/zSgiXGELjbc" frameborder="0" allowfullscreen></iframe>
+      <div id="bio" class="info">
+        <div id="inner-bio">
+          <h1>Brandon Drumheller <br /> <h3>ブランドン　ドラムヘラ</h3> </h1>
+          <p>"Study hard what interests you the most in the most undisciplined, irreverent and original manner possible." - Richard Feynman</p>
+          
+          <h2><u>Bio</u></h2>
+          <p>I am a Computer Science and Mathematics dual major at Rensselaer Polytechnic Institute (RPI) graduating in December 2016. 
+          I am academically motivated with interests primarily in programming and maths. I am admittedly an overachiever.  
+          I was able to combine my skillsets together when I worked with <a href="https://triazo.net/" target="_blank">Adam Freeman</a> 
+          to write <a href="pdf/gaussian-curvature.pdf" target="_blank"> this paper on coloring Gaussian curvature</a> on arbitrary Blender meshes.
+          The source code is available <a href="https://github.com/triazo/meshblend" target="_blank">on Github</a>. I prefer to work with backend 
+          development, but I have experience with frontend development as well. When I am not working, I enjoy learning about other cultures. 
+          While at RPI, I have worked with the Japanese Cultural Association, the Hong Kong Students Association, and the Asian Cultural Union to promote
+          cultural awareness on our campus. I would also like to improve my Japanese to at least an N5 proficiency. Additionally, I like puzzles ಠ‿↼.
+          </p>
+          <h2><u>Recommended Channels</u></h2>
+          <ul>
+            <li><a href="https://www.youtube.com/channel/UCoxcjq-8xIDTYp3uz647V5A" target="_blank">Numberphile</a></li> &bull;
+            <li><a href="https://www.youtube.com/channel/UC6nSFpj9HTCZ5t-N3Rm3-HA" target="_blank">VSauce</a></li> &bull;
+            <li><a href="https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA" target="_blank">Computerphile</a></li> &bull;
+            <li><a href="https://www.youtube.com/channel/UCR9sFzaG9Ia_kXJhfxtFMBA" target="_blank">MelodySheep</a></li> &bull;
+            <li><a href="https://www.youtube.com/channel/UCSju5G2aFaWMqn-_0YBtq5A" target="_blank">StandUpMaths</a></li> &bull;
+            <li><a href="https://www.youtube.com/channel/UCuTNcnGVHRlEJ7uq-X8mfTQ" target="_blank">JPCMHD</a></li> &bull;
+            <li><a href="https://www.youtube.com/channel/UCMpizQXRt817D0qpBQZ2TlA" target="_blank">Singing Banana</a></li> &bull;
+            <li><a href="https://www.youtube.com/channel/UCZOnoLKzoBItcEk5OsES2TA" target="_blank">Don't Hug Me I'm Scared</a></li> &bull;
+            <li><a href="https://www.youtube.com/channel/UCsXVk37bltHxD1rDPwtNM8Q" target="_blank">Kurzgesagt</a></li> &bull;
+            <li><a href="https://www.youtube.com/channel/UCH6vXjt-BA7QHl0KnfL-7RQ" target="_blank">Simon's Cat</a></li> &bull;
+            <li><a href="https://www.youtube.com/channel/UCNYrK4tc5i1-eL8TXesH2pg" target="_blank">Schmoyoho</a></li>
+          </ul>
+          <iframe style="padding-top:40px;" width="60%" height="37.5%" src="https://www.youtube.com/embed/zSgiXGELjbc" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
     </div>
     <div class='red-bar-pad'></div>
