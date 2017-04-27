@@ -1,0 +1,164 @@
+/*"I see a red door and I want to paint it black"*/
+/*"I see a red door and I want to paint it black"*/
+
+html, head, body, a{   
+  width: 100%;    
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: #ff4d4d;
+  font-family: Consolas, Times, serif;
+  
+}
+
+html{
+  overflow:hidden;
+}
+
+a{
+  text-decoration: none;
+  background-color: #0d0d0d;
+}
+
+a.extlink{
+  text-decoration: underline; 
+}
+
+a:hover{
+  color: #ff4d4d;
+}
+
+i{ 
+  background-color: #0d0d0d;
+  text-align: center;
+}
+
+table{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+td{
+  position: relative;
+}
+
+.outer{
+  padding: 0.4em;
+}
+
+#center-icon{
+  padding-left: 0.4em;
+  padding-right: 0.4em;
+  bottom:0px;
+}
+
+#buttons{
+  font-size: 400%;
+  vertical-align: middle;
+  height:100%;
+  overflow:auto;
+}
+
+.m-link:hover{
+  color: #ff4d4d;
+}
+
+#male{
+  font-size: 160%;
+  padding-left: 0.2em;
+  padding-right: 0.2em;
+  padding-bottom:0em;
+}
+
+#male:hover{
+  color:#ffffb3;
+}
+
+/* "Time can never mend, the careless whispers of a good friend." */
+#heart:hover{
+  font-size: 130%;
+}
+
+.red-bar{
+  height: 35%;
+  width: 100%;
+  min-width: 50px;
+  min-height: 50px;
+  background-color: #ff4d4d;
+}
+
+.red-bar-pad{
+  min-width: 50px;
+  min-height: 90px;
+  background-color: #ff4d4d;
+  display:none;
+}
+
+#rollup{
+  height: 35%;
+  min-width: 0px !important;
+  min-height: 0px !important;
+}
+
+#main-content{
+  height: 30%;
+  width: 100%;
+  min-height: 220px;
+  min-width: 550px;
+  background-color: #0d0d0d; 
+  overflow:hidden;
+}
+
+.info{
+  text-align:center;
+  height:auto;
+  display:none;
+  padding: 3em;
+  padding-top:5em;
+  padding-bottom:5em;
+  width:80%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #0d0d0d;
+}
+
+.pdf{
+  overflow:hidden; 
+  max-height:100%;
+  max-width:100%;
+}
+
+#inner-bio{
+  height:100%;
+  max-height:100%;
+  max-width:900px;
+  margin: auto;
+}
+
+/*Different strokes for different folks */
+.stroke {
+  -webkit-text-stroke: 2px #ff4d4d;
+}
+
+.arrow-up {
+  width: 0; 
+  height: 0; 
+  border-left: 1em solid transparent;
+  border-right: 1em solid transparent;
+  border-bottom: 0.75em solid white;
+  position: absolute; 
+  bottom: -3px; 
+  right:0.2em;
+  visibility:hidden;
+}
+
+ul{
+  list-style: none;
+  margin: 0; 
+  padding: 0; 
+}
+
+li{
+  display:inline;
+}
