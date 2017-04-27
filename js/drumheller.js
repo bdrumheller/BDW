@@ -5,15 +5,13 @@ function getHeightPercent(id){
     );       
 }
 
-/* Should do this a better way, but it's 2:17 A.M and it works :P*/
-
 var last_clicked = '';
 
 function moveBars(event, reset){
     event.preventDefault();
     var height_pct = getHeightPercent('#bottom-bar'); 
-    if (height_pct === 35 || (!reset && height_pct === 135)){
-        $('#bottom-bar').height("135%"); /*Replace with a calculation based on page width */
+    if (height_pct === 35 || !reset){
+        $('#bottom-bar').height("auto"); 
         $('.red-bar-pad').css('display','block');
     } else if (reset){
         $('.red-bar-pad').css('display','none');
@@ -28,7 +26,7 @@ function moveBars(event, reset){
 
 function bioStuff(height_pct,reset){
     $('html').css('overflow','auto');
-    if (height_pct === 35 || (!reset && height_pct === 135)){
+    if (height_pct === 35 || !reset){
         $('#bio').css('display','block');
     } else{
         $('#bio').css('display','none');
@@ -55,7 +53,7 @@ $(document).ready(function(){
 
 function resumeStuff(height_pct,reset){
     $('html').css('overflow','auto');
-    if (height_pct === 35 || (!reset && height_pct === 135)){
+    if (height_pct === 35 || !reset){
         $('#resume-pdf').css('display','block');
     } else{
         $('#resume-pdf').css('display','none');
