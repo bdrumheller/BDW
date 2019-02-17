@@ -1,92 +1,88 @@
 <!DOCTYPE html>
-<!-- Come with me and you'll be, in a world of my imagination.  (^_^) -->
 <html lang="en-US">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8"/>
     <title>Brandon Drumheller</title>
     <link rel="stylesheet" href="css/drumheller.css">
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link href="font-awesome/css/fontawesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="font-awesome/css/solid.min.css" >
+	<link rel="stylesheet" href="font-awesome/css/brands.min.css" >
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
-    <script src="js/pdfjs/build/pdf.js"></script>
-    <script src="js/jquery.min.js"></script>
-    <script src="js/drumheller.js"></script>
-    <script src="js/resume.js"></script>    
   </head>
   <body>
-    <div id="rollup" class="red-bar"></div>  
     <div id="main-content">
       <table id="buttons">
-        <tr>
-          <td rowspan="2" class="outer">
+        <tr id="icons">
+          <td class="outer">
             <a href="https://www.linkedin.com/in/bdrumheller" target="_blank">
-              <i class="m-link icon-linkedin-sign"></i>
+              <i class="fab fa-linkedin"></i>
             </a>
           </td> 
-          <td rowspan="2" class="outer">
+          <td class="outer">
             <a href="https://github.com/bdrumheller/" target="_blank"> 
-              <i class="m-link icon-github-sign"></i>
+              <i class="fab fa-github"></i
             </a>
           </td>
-          <td id="center-icon">
-            <a href="" >
-              <!-- Triggered -->
-              <i id="male" class="icon-male"></i>
+          <td id="center-icon" class="outer">
+            <a href="index.html">
+			  <i class="fas fa-male fa-lg"></i>
             </a>
           </td>
-          <td rowspan="2" class="outer"> 
-            <a href="">
-              <i id="resume" class="m-link icon-file-text"></i>
+		  <td class="outer">
+            <a href="blog.html">
+			  <i class="fas fa-blog"></i>
             </a>
           </td>
-          <td rowspan="2" class="outer"> 
-            <i id="heart" class="m-link icon-heart"></i>
+		  <td class="outer">
+            <a download href="pdf/resume.pdf" target="_blank">
+			  <i class="fas fa-file-alt"></i>
+            </a>
           </td>
-      </tr>
-      <tr style="height:1px">
-        <td>
-          <div class="arrow-up"> </div>
-        </td>
-      </tr>
+		</tr>
+		<tr id="icon-labels">
+			<td>LinkedIn</td>
+			<td>GitHub</td>
+			<td id="current-page">Bio</td>
+			<td>Blog</td>
+			<td>Resume</td>
+		</tr>
       </table>                
     </div>
     <div class="red-bar-pad"></div>
-    <div id="bottom-bar" class="red-bar">
-      <div id="resume-pdf" class="info">
-        <canvas id="resume-canvas" class="pdf"></canvas>
-      </div>
-      <div id="bio" class="info">
-        <div id="inner-bio">
-          <h1>Brandon Drumheller <br /> <h3>ブランドン　ドラムヘラ</h3> </h1>
-          <p>"Study hard what interests you the most in the most undisciplined, irreverent and original manner possible." - Richard Feynman</p>
-          
-          <h2><u>Bio</u></h2>
-          <p>I am a Computer Science and Mathematics dual major at Rensselaer Polytechnic Institute (RPI) graduating in December 2016. 
-          I am academically motivated with interests primarily in programming and maths. I am admittedly an overachiever.  
-          I was able to combine my skillsets together when I worked with <a href="https://triazo.net/" target="_blank" class="extlink">Adam Freeman</a> 
-          to write <a href="pdf/gaussian-curvature.pdf" target="_blank" class="extlink"> this paper</a> on coloring Gaussian curvature on arbitrary Blender meshes.
-          The source code is available <a href="https://github.com/triazo/meshblend" target="_blank" class="extlink">on Github</a>. I prefer to work with backend 
-          development, but I have experience with frontend development as well. When I am not working, I enjoy learning about other cultures. 
-          While at RPI, I have worked with the Japanese Cultural Association, the Hong Kong Students Association, and the Asian Cultural Union to promote
-          cultural awareness on our campus. I would also like to improve my Japanese to at least an N5 proficiency. Additionally, I like puzzles ಠ‿↼.
+    <div id="bottom-bar">
+      <div class="info">
+        <div id="inner-info">
+		  <div style="text-align:center;padding-bottom:2em;">
+			<h1>Brandon Drumheller <br /> <h3>ドラムヘラ • ブランドン</h3> </h1>
+			<p>"Study hard what interests you the most in the most undisciplined, irreverent and original manner possible." - Richard Feynman</p>
+          </div>
+		  <h2><u>Bio</u></h2>
+          <p>Currently, I work as a software engineer for the Capital One Financial Corporation in Plano, TX. There, I have developed numerous backend applications. Primarily,
+			 RESTFUL Java-based microservices which incorporate: Spring Boot framework; JPA (Java Persistence API); PostgreSQL; Kafka;
+			 and AWS services (ECS, EC2, S3). In my spare time, I enjoy working with Python and have served as a contributor 
+			 for the Metamorphic Petrology Database project, which was built using the Django framework.
+			 I earned a dual Bachelor of Science degree in Computer Science and Mathematics from Rensselaer Polytechnic Institute (RPI).
+			 Although I don't typically use maths in my day job, I like watching 
+			<a href="https://www.youtube.com/channel/UCtAIs1VCQrymlAnw3mGonhw" target="_blank">Flammable Maths</a>,
+			<a href="https://www.youtube.com/user/blackpenredpen" target="_blank">BlackPenRedPen</a>, and 
+			<a href="https://www.youtube.com/user/LetssolveMP" target="_blank">Lets Solve Math Problems</a>
+			 to stay sharp. Outside of CS/Math, I like learning about other cultures.
+			I study Japanese in my spare time, and have achieved an N5 proficiency on the 
+			<a href="https://www.jlpt.jp/e/" targe="_blank">Japanese Language Proficiency Test (JLPT)</a>. I am working towards an N4 proficiency now.
+			I'm also known for my bank shot in foosball :P.
           </p>
-          <h2><u>Recommended Channels</u></h2>
-          <ul>
-            <li><a href="https://www.youtube.com/channel/UCoxcjq-8xIDTYp3uz647V5A" target="_blank">Numberphile</a></li> &bull;
-            <li><a href="https://www.youtube.com/channel/UC6nSFpj9HTCZ5t-N3Rm3-HA" target="_blank">VSauce</a></li> &bull;
-            <li><a href="https://www.youtube.com/channel/UC9-y-6csu5WGm29I7JiwpnA" target="_blank">Computerphile</a></li> &bull;
-            <li><a href="https://www.youtube.com/channel/UCR9sFzaG9Ia_kXJhfxtFMBA" target="_blank">MelodySheep</a></li> &bull;
-            <li><a href="https://www.youtube.com/channel/UCSju5G2aFaWMqn-_0YBtq5A" target="_blank">StandUpMaths</a></li> &bull;
-            <li><a href="https://www.youtube.com/channel/UCuTNcnGVHRlEJ7uq-X8mfTQ" target="_blank">JPCMHD</a></li> &bull;
-            <li><a href="https://www.youtube.com/channel/UCMpizQXRt817D0qpBQZ2TlA" target="_blank">Singing Banana</a></li> &bull;
-            <li><a href="https://www.youtube.com/channel/UCZOnoLKzoBItcEk5OsES2TA" target="_blank">Don't Hug Me I'm Scared</a></li> &bull;
-            <li><a href="https://www.youtube.com/channel/UCsXVk37bltHxD1rDPwtNM8Q" target="_blank">Kurzgesagt</a></li> &bull;
-            <li><a href="https://www.youtube.com/channel/UCH6vXjt-BA7QHl0KnfL-7RQ" target="_blank">Simon's Cat</a></li> &bull;
-            <li><a href="https://www.youtube.com/channel/UCNYrK4tc5i1-eL8TXesH2pg" target="_blank">Schmoyoho</a></li>
-          </ul>
-          <iframe style="padding-top:60px;padding-bottom:40px; width:80%;height:20%;min-height:360px;" src="https://www.youtube.com/embed/zSgiXGELjbc?iv_load_policy=3" frameborder="0" allowfullscreen></iframe>
+		  <img id="bio-pic" src="img/drumheller.jpg"/>
         </div>
       </div>
     </div>
     <div class='red-bar-pad'></div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-99322748-1', 'auto');
+      ga('send', 'pageview');
+    </script>
   </body>
 </html>

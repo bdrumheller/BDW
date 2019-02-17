@@ -1,6 +1,3 @@
-/*"I see a red door and I want to paint it black"*/
-/*"I see a red door and I want to paint it black"*/
-
 html, head, body, a{   
   width: 100%;    
   height: 100%;
@@ -9,15 +6,9 @@ html, head, body, a{
   color: white;
   background-color: #ff4d4d;
   font-family: Consolas, Times, serif;
-  
-}
-
-html{
-  overflow:hidden;
 }
 
 a{
-  text-decoration: none;
   background-color: #0d0d0d;
 }
 
@@ -44,20 +35,36 @@ td{
 }
 
 .outer{
-  padding: 0.4em;
+  padding-left: 0.5em;
+  padding-right: 0.5em;
+  padding-top: 0em;
+  padding-bottom: 0.3em;
+  vertical-align:bottom;
 }
 
 #center-icon{
-  padding-left: 0.4em;
-  padding-right: 0.4em;
+  padding-left: 0.8em;
+  padding-right: 0.8em;
   bottom:0px;
 }
 
 #buttons{
-  font-size: 400%;
   vertical-align: middle;
   height:100%;
   overflow:auto;
+}
+
+#icons{
+ font-size: 400%;
+}
+
+#icon-labels{
+ text-align: center;
+ vertical-align: top;
+}
+
+#icon-labels td{
+ padding-bottom:2em;
 }
 
 .m-link:hover{
@@ -71,34 +78,10 @@ td{
   padding-bottom:0em;
 }
 
-#male:hover{
-  color:#ffffb3;
-}
-
-/* "Time can never mend, the careless whispers of a good friend." */
-#heart:hover{
-  font-size: 130%;
-}
-
-.red-bar{
-  height: 35%;
-  width: 100%;
-  min-width: 50px;
-  min-height: 50px;
-  background-color: #ff4d4d;
-}
-
 .red-bar-pad{
   min-width: 50px;
   min-height: 90px;
   background-color: #ff4d4d;
-  display:none;
-}
-
-#rollup{
-  height: 35%;
-  min-width: 0px !important;
-  min-height: 0px !important;
 }
 
 #main-content{
@@ -111,9 +94,8 @@ td{
 }
 
 .info{
-  text-align:center;
+  text-align:justify;
   height:auto;
-  display:none;
   padding: 3em;
   padding-top:5em;
   padding-bottom:5em;
@@ -123,34 +105,12 @@ td{
   background-color: #0d0d0d;
 }
 
-.pdf{
-  overflow:hidden; 
-  max-height:100%;
-  max-width:100%;
-}
-
-#inner-bio{
+#inner-info{
   height:100%;
   max-height:100%;
   max-width:900px;
   margin: auto;
-}
-
-/*Different strokes for different folks */
-.stroke {
-  -webkit-text-stroke: 2px #ff4d4d;
-}
-
-.arrow-up {
-  width: 0; 
-  height: 0; 
-  border-left: 1em solid transparent;
-  border-right: 1em solid transparent;
-  border-bottom: 0.75em solid white;
-  position: absolute; 
-  bottom: -3px; 
-  right:0.2em;
-  visibility:hidden;
+  display: block;
 }
 
 ul{
@@ -161,4 +121,23 @@ ul{
 
 li{
   display:inline;
+}
+
+#bio-pic{
+  max-width:40%;
+  max-height:40%;
+  margin-left:auto;
+  margin-right:auto;
+  display:block;
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
+
+#current-page{
+  text-decoration:underline;
+  color: #ff4d4d;
+}
+
+b{
+	color: #ff4d4d;
 }
