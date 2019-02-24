@@ -5,7 +5,7 @@ html, head, body, a{
   padding: 0;
   color: white;
   background-color: #ff4d4d;
-  font-family: Consolas, Times, serif;
+  font-family: 'Inconsolata', monospace, Consolas, Times, serif;
 }
 
 a{
@@ -140,4 +140,8 @@ li{
 
 b{
 	color: #ff4d4d;
+}
+
+.blog-title{
+	padding-right: 1.2em;
 }
