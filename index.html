@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8"/>
     <title>Brandon Drumheller</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
     <link rel="stylesheet" href="css/drumheller.css">
 	<link href="font-awesome/css/fontawesome.min.css" rel="stylesheet">
@@ -11,43 +12,78 @@
     <link rel='shortcut icon' type='image/x-icon' href='favicon.ico'>
   </head>
   <body>
-    <div id="main-content">
-      <table id="buttons">
-        <tr id="icons">
-          <td class="outer">
-            <a href="https://www.linkedin.com/in/bdrumheller" target="_blank">
-              <i class="fab fa-linkedin"></i>
-            </a>
-          </td> 
-          <td class="outer">
-            <a href="https://github.com/bdrumheller/" target="_blank"> 
-              <i class="fab fa-github"></i
-            </a>
-          </td>
-          <td id="center-icon" class="outer">
-            <a href="index.html">
-			  <i class="fas fa-male fa-lg"></i>
-            </a>
-          </td>
-		  <td class="outer">
-            <a href="blog.html">
-			  <i class="fas fa-blog"></i>
-            </a>
-          </td>
-		  <td class="outer">
-            <a download href="pdf/resume.pdf" target="_blank">
-			  <i class="fas fa-file-alt"></i>
-            </a>
-          </td>
-		</tr>
-		<tr id="icon-labels">
-			<td>LinkedIn</td>
-			<td>GitHub</td>
-			<td id="current-page">Bio</td>
-			<td class="blog-title">Blog</td>
-			<td>Resume</td>
-		</tr>
-      </table>                
+    <div id="main-content">  
+		<div class="desktop-icons">
+			<div class="flex-item">
+				<div class="nav-icons">
+					<a href="https://www.linkedin.com/in/bdrumheller" target="_blank">
+						<i class="fab fa-linkedin"></i>
+					</a>
+				</div>
+				<br/>
+				LinkedIn
+			</div>
+			<div class="flex-item">
+				<div class="nav-icons">
+					<a href="https://github.com/bdrumheller/" target="_blank"> 
+					  <i class="fab fa-github"></i>
+					</a>
+				</div>
+				<br />
+				Github
+			</div>
+			<div class="flex-item">
+				<div class="nav-icons">
+					<a href="index.html">
+					  <i class="fas fa-male fa-lg"></i>
+					</a>
+				</div>
+				<br/>
+				<div id="current-page">Bio</div>
+			</div>
+			<div class="flex-item">
+				<div class="nav-icons">
+					<a href="blog.html">
+					  <i class="fas fa-blog"></i>
+					</a>
+				</div>
+				<br />
+				Blog
+			</div>
+			<div class="flex-item">
+				<div class="nav-icons">
+					<a download href="pdf/resume.pdf" target="_blank">
+					  <i class="fas fa-file-alt"></i>
+					</a>
+				</div>
+				<br/>
+				Resume
+			</div>
+		</div>
+		<!-- mobile nav-->
+		<div class="mobile-icons">
+			<div class="mobile-item">
+				<a href="https://www.linkedin.com/in/bdrumheller" target="_blank">
+					<i class="fab fa-linkedin"></i> LinkedIn</a>
+			</div>
+			<div class="mobile-item">
+				<a href="https://github.com/bdrumheller/" target="_blank"> 
+				  <i class="fab fa-github"></i> Github</a>
+			</div>
+			<div class="mobile-item">
+				<a href="index.html">
+				  <i class="fas fa-male fa-lg"></i> <u>Bio</u></a>
+			</div>
+			<div class="mobile-item">
+				<a href="blog.html">
+				  <i class="fas fa-blog"></i> Blog</a>
+			</div>
+			<div class="mobile-item">
+				<a download href="pdf/resume.pdf" target="_blank">
+				  <i class="fas fa-file-alt"></i> Resume</a>
+				  
+			</div>
+		</div>
     </div>
     <div class="red-bar-pad"></div>
     <div id="bottom-bar">
