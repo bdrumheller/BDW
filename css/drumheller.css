@@ -176,6 +176,10 @@ b{
 	text-decoration: none;
 }
 
+.mobile-item i{
+	width: 30px;
+}
+
 .flex-item{
 	padding-left: 50px;
 	padding-right: 50px;
