@@ -63,11 +63,11 @@
 		<!-- mobile nav-->
 		<div class="mobile-icons">
 			<div class="mobile-item">
-				<a href="https://www.linkedin.com/in/bdrumheller" target="_blank" rel="noopener">
+				<a href="https://www.linkedin.com/in/bdrumheller" target="_blank">
 					<i class="fab fa-linkedin"></i> LinkedIn</a>
 			</div>
 			<div class="mobile-item">
-				<a href="https://github.com/bdrumheller/" target="_blank" rel="noopener"> 
+				<a href="https://github.com/bdrumheller/" target="_blank"> 
 				  <i class="fab fa-github"></i> Github</a>
 			</div>
 			<div class="mobile-item">
@@ -90,20 +90,45 @@
       <div class="info">
         <div id="inner-info">
 		  <div>
-		    <h1 style="text-align:left;">Element Blocks</h1>
-			<h3><b>02/22/2019 <i class="fas fa-cubes"></i></b></h3>
-				<p>This is a problem set I developed while playing with <a href="https://www.amazon.com/Uncle-Goose-Periodic-Table-Blocks/dp/B01E7AP4JU" target="_blank" rel="noopener">
-				Uncle Goose Periodic Table Blocks</a> I received as a gift.
-				The problems have been slightly revised since the original 2018 draft. Solutions <i>might</i> be posted in the future :P.</p>
-				
-				<p>Please find the <a download href="../pdf/puzzles/element-blocks.pdf">problem set here</a>.</p>
-				
-				<p style="margin-left:auto;margin-right:auto;display:block;">
-				 <img id='bio-pic' src="../img/block-close.jpg" alt="Uncle Goose Periodic Table Block">
+		    <h1 style="text-align:left;">Integer Sequences</h1>
+			<h3><b>10/12/2019 <i class="fas fa-sort-numeric-down"></i></b></h3>
+				<p>Sequence finding problems are often trivial. They follow some basic arithmetic operations from one term to the next.
+				Here, I introduce the concepts of tupular and self-referential sequences. These allow for more interesting patterns to emerge as n-ary operators 
+				including min, max, median, cardinality, etc. can now be applied to each term.</p>
+				<br />
+				<h2>Tupular Sequences</h2>
+				<p>Consider a sequence of tuples in the form (a,b,c, ... n) where a,b,c, ... n are integers. Terms in a tupular sequence are generated recursively by 
+				applying an n-arity function to one or more previous sequence entries. Try to attempt the examples below before viewing <a href="sequences-ans/tupular.html">the solutions</a>.</p>
+				<br/>
+				<div style="padding-left:3em;"> 
+					<h3><b>Example 0</b></h3>
+						Find the next three terms in the sequence: </br></br>
+						&nbsp(0,2), (5,2), (5,12), (55,12)
+					<br /><br />
+					<h3><b>Example 1</b></h3>
+						Find the next three terms in the sequence: </br></br>
+						&nbsp(7,5,7), (7,7,7), (10,7,7), (10,9,7)
+					<br />
+				</div>
+				<br />
+				<br />
+				<h2>Self-Referential Sequences</h2>
+				<p>Consider an integer sequence of the form a1, a2, a3, a4, ... an where a1, a2, ... an are integers. A self-referential sequence is formed by taking entries
+				from the sequence an with indicies based on values in the sequence. Try to attempt the examples below before viewing <a href="sequences-ans/self-referential.html">the solutions</a>.
 				</p>
-							
-			<p>Best of luck.</p>
-			
+				<br />
+				<div style="padding-left:3em;"> 
+					<h3><b>Example 0</b></h3>
+						Find the next three terms in the sequence: </br></br>
+						&nbsp(0,4,49,289)
+					<br /><br />
+					<h3><b>Example 1</b></h3>
+						Find the next three terms in the sequence: </br></br>
+						&nbsp(0,1,3,13,89)
+					<br /><br />
+				</div>
+				<br />
+				<br />
 			<b>B Drumheller</b>
 		  </div>
         </div>
