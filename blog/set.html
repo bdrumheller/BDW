@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Brandon Drumheller</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+    <link rel="stylesheet" href="../css/drumheller.css">
+	<link href="../font-awesome/css/fontawesome.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="../font-awesome/css/solid.min.css" >
+	<link rel="stylesheet" href="../font-awesome/css/brands.min.css" >
+    <link rel='shortcut icon' type='image/x-icon' href='../favicon.ico'>
+  </head>
+  <body>
+    <div id="main-content">  
+		<div class="desktop-icons">
+			<div class="flex-item">
+				<div class="nav-icons">
+					<a href="https://www.linkedin.com/in/bdrumheller" target="_blank" rel="noopener">
+						<i class="fab fa-linkedin"></i>
+					</a>
+				</div>
+				<br/>
+				LinkedIn
+			</div>
+			<div class="flex-item">
+				<div class="nav-icons">
+					<a href="https://github.com/bdrumheller/" target="_blank" rel="noopener"> 
+					  <i class="fab fa-github"></i>
+					</a>
+				</div>
+				<br />
+				Github
+			</div>
+			<div class="flex-item">
+				<div class="nav-icons">
+					<a href="../index.html">
+					  <i class="fas fa-male fa-lg"></i>
+					</a>
+				</div>
+				<br/>
+				Bio
+			</div>
+			<div class="flex-item">
+				<div class="nav-icons">
+					<a href="../blog.html">
+					  <i class="fas fa-blog"></i>
+					</a>
+				</div>
+				<br />
+				<div id="current-page">Blog</div>
+			</div>
+			<div class="flex-item">
+				<div class="nav-icons">
+					<a download href="../pdf/resume.pdf" target="_blank">
+					  <i class="fas fa-file-alt"></i>
+					</a>
+				</div>
+				<br/>
+				Resume
+			</div>
+		</div>
+		<!-- mobile nav-->
+		<div class="mobile-icons">
+			<div class="mobile-item">
+				<a href="https://www.linkedin.com/in/bdrumheller" target="_blank">
+					<i class="fab fa-linkedin"></i> LinkedIn</a>
+			</div>
+			<div class="mobile-item">
+				<a href="https://github.com/bdrumheller/" target="_blank"> 
+				  <i class="fab fa-github"></i> Github</a>
+			</div>
+			<div class="mobile-item">
+				<a href="../index.html">
+				  <i class="fas fa-male fa-lg"></i> Bio</a>
+			</div>
+			<div class="mobile-item">
+				<a href="../blog.html">
+				  <i class="fas fa-blog"></i> <u>Blog</u></a>
+			</div>
+			<div class="mobile-item">
+				<a download href="../pdf/resume.pdf" target="_blank">
+				  <i class="fas fa-file-alt"></i> Resume</a>
+				  
+			</div>
+		</div>
+    </div>
+    <div class="red-bar-pad"></div>
+    <div id="bottom-bar">
+      <div class="info">
+        <div id="inner-info">
+		  <div>
+		    <h1 style="text-align:left;">Finding Sets</h1>
+			<h3><b>07/20/2020 <i class="fas fa-superscript"></i></b></h3>
+			<p> The game Set is played with a deck of 81 cards.</p>
+			<p> Each card has the following attributes:</p>
+			<ul style="padding-left:3em;">
+				<li> number - 1,2,3</li><br/>
+				<li> shading - solid, striped, open</li><br/>
+				<li>color - red, green, purple</li><br/>
+				<li>shape - diamond, squiggle, oval</li>
+			</ul>
+			<p> A set is a group of 3 cards for which all attributes are either identical across cards or unique to each card.</p>   
+			<p>The goal of the game is to identify as many sets as possible. When a set is found, the finder takes the cards out of play.</p>
+			<p>The game starts with 12 cards on the board. Cards are added to the board from the deck when either no sets
+		remain or when a set is found.</p>
+			<p>You can play an online version of the game here: <a href="https://setwithfriends.com/" target="_blank">https://setwithfriends.com/</a></p>
+
+			<h2 style="padding-top:8px;">Efficiently Bruteforcing Sets</h2>
+			<p>Let n be the maximum number of cards in play during the game. Naively, one may find sets on the board by trying all combinations of three cards O(n^3) - checking if the combination forms a valid set. However, this can be improved to O(n^2) time.</p>
+			<p>First, note that given any two cards there is a unique third card that forms a valid set. This is found using a simple procedure. For each attribute in the pair, if that
+				attribute is the same, the attribute in the third card is the common attribute, otherwise, it is the missing possibility for that attribute. 
+			</p>
+			<p>Let this third card be called the <b>complement</b> of a pair.</p>
+
+			<p>For the improved approach, first store each card in play in a hashset (using sets to find sets :P). 
+				Second, find every pair's complement and check for its existence in the hashset. This is analogous to spotting/recalling the complement
+				when playing. To prevent duplicates, only include third cards that have an index greater than the second's in the pair.
+			</p>
+			<p>Overall this approach has O(n) space complexity and O(n^2) time complexity.</p>
+			<h2 style="padding-top:8px;">Example</h2>
+			<p>Below is a sample game along with a Python implementation. Index numbers (upper right of each card) are included for identification purposes. 
+				The sets are [0, 11, 14], [4, 7, 14], and [5, 10, 12].
+			</p>
+			<img id='bio-pic' style="max-width: 50% !important;" src="../img/sets.png" alt="example-set-game">
+			<br/>
+			<script src="https://gist.github.com/bdrumheller/7fe0bfe7e1f3237163d058ea0fddc353.js"></script>
+			<br /><br />
+			You are now <b>set</b> with the <b>skillset</b> to bruteforce <b>Set</b> :P. 
+ 			<br /><br /><br /><br />
+			<b>B Drumheller</b>
+		  </div>
+        </div>
+      </div>
+    </div>
+    <div class='red-bar-pad'></div>
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-99322748-1', 'auto');
+      ga('send', 'pageview');
+    </script>
+  </body>
+</html>
